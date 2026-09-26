@@ -3,6 +3,7 @@ import MessageDetail from "./MessageDetail";
 import MessageForm from "./MessageForm";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
+import API_URL from "../api";
 
 const Home = () => {
   const {messages, setMessages} = useContext(MessageContext);
@@ -10,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch("/api/message/");
+        const response = await fetch(`${API_URL}/api/message/`);
 
         if (!response.ok) {
           throw new Error('Failed to fetch');

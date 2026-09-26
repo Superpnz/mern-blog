@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
+import API_URL from "../api";
 
 const MessageDetail = ({ message }) => {
   const { setMessages } = useContext(MessageContext);
 
   const handleClick = async () => {
     try {
-      const response = await fetch("/api/message/" + message._id, {
+      const response = await fetch(`${API_URL}/api/message/${message._id}`, {
         method: "DELETE",
       });
 

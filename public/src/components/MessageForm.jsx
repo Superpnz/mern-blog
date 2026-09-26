@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { MessageContext } from "../context/MessageContext";
+import API_URL from "../api";
 
 const MessageForm = () => {
     const {setMessages} = useContext(MessageContext);
@@ -15,7 +16,7 @@ const MessageForm = () => {
     const message = { text, author };
 
     try {
-      const response = await fetch("/api/message/", {
+      const response = await fetch(`${API_URL}/api/message/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
