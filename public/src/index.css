@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  background: #000;
+  padding: 20px 5%;
+  border-bottom: 1px solid #35c750;
+}
+
+header span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main-section {
+  padding: 30px clamp(16px, 5%, 80px);
+}
+
+.main-section h1{
+  font-size: 25px;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.messages {
+  flex: 1;
+  margin-top: 50px;
+}
+
+.messages .message {
+  position: relative;
+  margin-bottom: 30px;
+  background: #a4d9ed;
+  color: #34515c;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.messages .message h4 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.messages .message hr {
+  margin: 10px 0;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #34515c;
+}
+
+.messages .message span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e85a4f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  height: 28px;
+  width: 28px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.messages .message span:hover {
+  background: #d32b12;
+  transform: scale(1.3);
+}
+
+.add-message {
+  width: 30%;
+}
+
+.add-message textarea,
+.add-message input,
+.add-message button {
+  font: inherit;
+}
+
+.add-message textarea,
+.add-message input {
+  width: 100%;
+  margin: 10px 0;
+  border: 0;
+  outline: none;
+  padding: 10px;
+  resize: none;
+  background: #d8d8d8;
+  border-radius: 5px;
+}
+
+.add-message textarea:focus,
+.add-message input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #35c750;
+}
+
+.add-message button {
+  border: 0;
+  background: #35c750;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #0c550a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.add-message button:hover {
+  transform: scale(1.1);
+}
+
+.add-message .error {
+  background-color: #fc7654;
+  color: #802b16;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
