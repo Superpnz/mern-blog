@@ -31,7 +31,7 @@ const MessageDetail = ({ message }) => {
       <h4>{message.author}</h4>
       <p>{message.text}</p>
       <hr />
-      <p>{message.createdAt}</p>
+      <p>{new Date(message.createdAt).toLocaleString("ru-RU")}</p>
     </div>
   );
 };
